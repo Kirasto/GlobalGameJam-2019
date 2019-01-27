@@ -5,11 +5,7 @@ using UnityEngine;
 public class Player : Character
 {
     [SerializeField]
-    float moveSpeed = 1f;
-    [SerializeField]
     float rotationSpeed = 1f;
-    [SerializeField]
-    public bool canMove;
     [SerializeField]
     Transform ground;
     [SerializeField]

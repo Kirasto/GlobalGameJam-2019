@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    protected float maxHealth = 100;
+    [SerializeField]
+    protected float currentHealth = 100;
+    [SerializeField]
+    protected float damage = 10;
+    [SerializeField]
+    protected float defense = 10;
+    [SerializeField]
+    protected float moveSpeed = 1;
+    [SerializeField]
+    public bool canMove = true;
+
     void Start()
     {
-        int health = 100;
-        int attack = 10;
-        int defense = 10;
-        int speed = 1;
     }
 }

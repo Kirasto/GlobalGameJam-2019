@@ -70,12 +70,20 @@ public class DialogPanelController : MonoBehaviour
             }
         }
 
-        if (dialogOn && !dialogWrite && Input.GetMouseButtonDown(0))
+        if (dialogOn && Input.GetMouseButtonDown(0))
         {
-            if (player)
-                player.canMove = true;
-            dialogOn = false;
-            panel.SetActive(false);
+            if (dialogWrite)
+            {
+                text.SetText(textToDraw);
+                dialogWrite = false;
+            }
+            else
+            {
+                if (player)
+                    player.canMove = true;
+                dialogOn = false;
+                panel.SetActive(false);
+            }
         }
     }
 }
